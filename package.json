@@ -2,6 +2,7 @@
   "name": "erikk-2",
   "version": "1.0.0",
   "description": "ERIKK - Fashion & Branding Agency Website",
+  "homepage": "https://brandontaylor1.github.io/erikk-2/",
   "license": "ISC",
   "author": "",
   "type": "commonjs",
@@ -9,6 +10,11 @@
   "scripts": {
     "dev": "cd erikk && npx live-server --port=3000 --host=localhost",
     "start": "cd erikk && npx live-server --port=3000 --host=localhost --no-browser",
+    "predeploy": "echo Preparing to deploy...",
+    "deploy": "gh-pages -d erikk",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
