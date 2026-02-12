@@ -1,0 +1,609 @@
+/* Additional styles for Work, Services, About, and News pages */
+
+.page-container {
+    max-width: 1900px;
+    width: 100%;
+    padding: 0 4rem;
+    box-sizing: border-box;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.page-hero {
+    text-align: center;
+    padding: clamp(2rem, 8vw, 8rem) 0 clamp(3rem, 6vw, 6rem) 0;
+    width: 100%;
+}
+
+.page-title {
+    font-family: "GeneralSans-Light", sans-serif;
+    font-size: clamp(3rem, 8vw, 8rem);
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    margin-bottom: clamp(1rem, 3vw, 2rem);
+    line-height: 0.9;
+}
+
+.page-subtitle {
+    font-family: "Roboto Mono", monospace;
+    font-size: clamp(0.875rem, 2vw, 1.125rem);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: clamp(1.5rem, 4vw, 3rem);
+    opacity: 0.7;
+}
+
+.page-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: clamp(2rem, 5vw, 4rem);
+    margin-bottom: clamp(3rem, 6vw, 6rem);
+}
+
+.content-card {
+    background: var(--light-color);
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    padding: clamp(1.5rem, 4vw, 3rem);
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.content-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(17, 17, 17, 0.1);
+}
+
+.card-title {
+    font-family: "GeneralSans-Regular", sans-serif;
+    font-size: clamp(1.25rem, 3vw, 1.75rem);
+    font-weight: 600;
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.card-description {
+    font-family: "GeneralSans-Light", sans-serif;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    line-height: 1.6;
+    color: rgba(17, 17, 17, 0.8);
+    margin-bottom: clamp(1rem, 2vw, 1.5rem);
+}
+
+.card-list {
+    list-style: none;
+    padding: 0;
+}
+
+.card-list li {
+    font-family: "Roboto Mono", monospace;
+    font-size: clamp(0.75rem, 1.8vw, 0.875rem);
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.card-list li:last-child {
+    border-bottom: none;
+}
+
+.work-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: clamp(1rem, 3vw, 2rem);
+    margin-bottom: clamp(3rem, 6vw, 6rem);
+}
+
+.work-item {
+    position: relative;
+    aspect-ratio: 4/3;
+    background: rgba(17, 17, 17, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.work-item:hover {
+    transform: scale(1.02);
+}
+
+.work-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.work-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(17, 17, 17, 0.8));
+    color: white;
+    padding: clamp(1rem, 3vw, 2rem);
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.work-item:hover .work-overlay {
+    transform: translateY(0);
+}
+
+.work-title {
+    font-family: "GeneralSans-Regular", sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.work-category {
+    font-family: "Roboto Mono", monospace;
+    font-size: clamp(0.75rem, 1.8vw, 0.875rem);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.8;
+}
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: clamp(2rem, 5vw, 3rem);
+    margin-bottom: clamp(3rem, 6vw, 6rem);
+}
+
+.news-item {
+    background: var(--light-color);
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(17, 17, 17, 0.1);
+}
+
+.news-image {
+    width: 100%;
+    height: 200px;
+    background: rgba(17, 17, 17, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto Mono", monospace;
+    font-size: clamp(0.75rem, 1.8vw, 0.875rem);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(17, 17, 17, 0.5);
+}
+
+.news-content {
+    padding: clamp(1.5rem, 4vw, 2rem);
+}
+
+.news-date {
+    font-family: "Roboto Mono", monospace;
+    font-size: clamp(0.75rem, 1.8vw, 0.875rem);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.6;
+    margin-bottom: 1rem;
+}
+
+.news-title {
+    font-family: "GeneralSans-Regular", sans-serif;
+    font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.3;
+}
+
+.news-excerpt {
+    font-family: "GeneralSans-Light", sans-serif;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    line-height: 1.6;
+    color: rgba(17, 17, 17, 0.8);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: clamp(2rem, 5vw, 3rem);
+    margin-bottom: clamp(3rem, 6vw, 6rem);
+}
+
+.team-member {
+    text-align: center;
+    background: var(--light-color);
+    border: 1px solid rgba(17, 17, 17, 0.1);
+    border-radius: 8px;
+    padding: clamp(1.5rem, 4vw, 2rem);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(17, 17, 17, 0.1);
+}
+
+.team-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: rgba(17, 17, 17, 0.05);
+    margin: 0 auto 1.5rem auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Roboto Mono", monospace;
+    font-size: clamp(0.75rem, 1.8vw, 0.875rem);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(17, 17, 17, 0.5);
+}
+
+.team-name {
+    font-family: "GeneralSans-Regular", sans-serif;
+    font-size: clamp(1.125rem, 2.5vw, 1.25rem);
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.team-role {
+    font-family: "Roboto Mono", monospace;
+    font-size: clamp(0.75rem, 1.8vw, 0.875rem);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.6;
+    margin-bottom: 1rem;
+}
+
+.team-bio {
+    font-family: "GeneralSans-Light", sans-serif;
+    font-size: clamp(0.875rem, 2vw, 0.9375rem);
+    line-height: 1.6;
+    color: rgba(17, 17, 17, 0.8);
+}
+
+/* WORK PAGE SPECIFIC STYLES */
+
+/* Work Hero Section */
+.work-hero {
+    min-height: 60vh;
+    padding: clamp(4rem, 10vw, 8rem) 4rem clamp(3rem, 8vw, 6rem) 4rem;
+    max-width: 1900px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.work-hero-content {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: clamp(3rem, 8vw, 6rem);
+    width: 100%;
+    align-items: center;
+}
+
+.selected-work-title-container {
+    width: 100%;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+}
+
+.selected-work-title {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+.work-main-title {
+    font-family: "GeneralSans-Light", sans-serif;
+    font-size: clamp(4rem, 12vw, 10rem);
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    line-height: 0.85;
+    margin: 0;
+    margin-bottom: clamp(1rem, 3vw, 2rem);
+}
+
+.work-subtitle {
+    font-family: "Roboto Mono", monospace;
+    font-size: clamp(0.875rem, 2.5vw, 1.25rem);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    opacity: 0.7;
+    margin: 0;
+}
+
+.work-description {
+    font-family: "GeneralSans-Light", sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    line-height: 1.6;
+    color: rgba(17, 17, 17, 0.8);
+    margin: 0;
+}
+
+/* Featured Work Section */
+.featured-work-section {
+    padding: clamp(3rem, 8vw, 6rem) 4rem;
+    max-width: 1900px;
+    width: 100%;
+}
+
+.featured-work-container {
+    width: 100%;
+}
+
+.featured-project {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: clamp(3rem, 8vw, 6rem);
+    align-items: center;
+}
+
+.featured-project img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.featured-project-info h2 {
+    font-family: "GeneralSans-Regular", sans-serif;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    margin: 0 0 clamp(1rem, 3vw, 2rem) 0;
+    line-height: 0.9;
+}
+
+.featured-project-info p {
+    font-family: "Roboto Mono", monospace;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.7;
+    margin: 0 0 clamp(2rem, 4vw, 3rem) 0;
+}
+
+.project-tags {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.project-tags span {
+    font-family: "Roboto Mono", monospace;
+    font-size: clamp(0.75rem, 1.8vw, 0.875rem);
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--dark-color);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.project-tags span:hover {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
+/* Work Categories Section */
+.work-categories {
+    padding: clamp(3rem, 8vw, 6rem) 4rem;
+    max-width: 1900px;
+    width: 100%;
+    margin-top: clamp(2rem, 6vw, 4rem);
+}
+
+.category-item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: clamp(2rem, 6vw, 4rem);
+    padding: clamp(3rem, 6vw, 5rem) 0;
+    border-bottom: 1px solid rgba(17, 17, 17, 0.1);
+    align-items: start;
+}
+
+.category-item:last-child {
+    border-bottom: none;
+}
+
+.category-number {
+    font-family: "GeneralSans-Light", sans-serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 300;
+    color: rgba(17, 17, 17, 0.3);
+    line-height: 1;
+}
+
+.category-content h3 {
+    font-family: "GeneralSans-Regular", sans-serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    margin: 0 0 clamp(1rem, 3vw, 2rem) 0;
+    line-height: 0.9;
+}
+
+.category-content > p {
+    font-family: "GeneralSans-Light", sans-serif;
+    font-size: clamp(1rem, 2.5vw, 1.25rem);
+    line-height: 1.6;
+    color: rgba(17, 17, 17, 0.7);
+    margin: 0 0 clamp(2rem, 4vw, 3rem) 0;
+}
+
+.category-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: clamp(1.5rem, 4vw, 2rem);
+}
+
+.project-preview {
+    text-align: center;
+}
+
+.project-preview img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.project-preview img:hover {
+    transform: scale(1.05);
+}
+
+.project-preview h4 {
+    font-family: "Roboto Mono", monospace;
+    font-size: clamp(0.75rem, 1.8vw, 0.875rem);
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 0;
+}
+
+/* Work CTA Section */
+.work-cta {
+    padding: clamp(4rem, 10vw, 8rem) 4rem;
+    max-width: 1900px;
+    width: 100%;
+    text-align: center;
+    background: rgba(17, 17, 17, 0.02);
+    border-radius: 12px;
+    margin-top: clamp(3rem, 6vw, 5rem);
+}
+
+.work-cta-content h2 {
+    font-family: "GeneralSans-Light", sans-serif;
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: -0.02em;
+    line-height: 0.9;
+    margin: 0 0 clamp(1.5rem, 4vw, 2rem) 0;
+}
+
+.work-cta-content p {
+    font-family: "Roboto Mono", monospace;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 0.7;
+    margin: 0 0 clamp(2rem, 5vw, 3rem) 0;
+}
+
+.work-cta-btn {
+    font-family: "Roboto Mono", monospace;
+    font-size: clamp(0.875rem, 2vw, 1rem);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: clamp(1rem, 3vw, 1.5rem) clamp(2rem, 5vw, 3rem);
+    background-color: var(--dark-color);
+    color: var(--light-color);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.work-cta-btn:hover {
+    background-color: rgba(17, 17, 17, 0.8);
+    transform: translateY(-2px);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 768px) {
+    .page-container {
+        padding: 0 2rem;
+    }
+    
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .work-gallery {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .news-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .work-hero-content {
+        grid-template-columns: 1fr;
+        gap: clamp(2rem, 6vw, 3rem);
+        text-align: center;
+    }
+    
+    .featured-project {
+        grid-template-columns: 1fr;
+        gap: clamp(2rem, 6vw, 3rem);
+        text-align: center;
+    }
+    
+    .category-item {
+        grid-template-columns: 1fr;
+        gap: clamp(1rem, 4vw, 2rem);
+        text-align: center;
+    }
+    
+    .category-projects {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-tags {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .page-container {
+        padding: 0 1rem;
+    }
+    
+    .content-card {
+        padding: 1.5rem;
+    }
+    
+    .news-content {
+        padding: 1.5rem;
+    }
+    
+    .team-member {
+        padding: 1.5rem;
+    }
+}
