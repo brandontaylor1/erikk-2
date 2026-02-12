@@ -1,0 +1,13 @@
+{
+  "name": "erikk",
+  "version": "1.0.0",
+  "description": "ERIKK - Fashion & Branding Agency Website",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npx live-server --port=3000 --host=localhost --no-browser",
+    "start": "npx live-server --port=3000 --host=localhost",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
