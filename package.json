@@ -1,0 +1,14 @@
+{
+  "name": "erikk-2",
+  "version": "1.0.0",
+  "description": "ERIKK - Fashion & Branding Agency Website",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cd erikk && npx live-server --port=3000 --host=localhost",
+    "start": "cd erikk && npx live-server --port=3000 --host=localhost --no-browser",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
